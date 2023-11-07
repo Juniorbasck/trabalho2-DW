@@ -31,7 +31,7 @@ namespace ERP.Data
                 }
             }
             catch (CosmosException ex)
-            {
+            {   
                 throw new Exception("Erro ao adicionar item ao CosmosDB", ex);
             }
         }

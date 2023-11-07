@@ -18,15 +18,7 @@ namespace ERP.Services
 
         public async Task AddUser(User user)
         {
-            var newUser = new User
-            {
-                Id = Guid.NewGuid(),
-                Name = user.Name,
-                Email = user.Email,
-                PassWord = user.PassWord,
-            };
-
-            await _context.Add(containerName, newUser, newUser.Id.ToString());
+            await _context.Add(containerName, user, user.Id.ToString());
         }
     }
 }
